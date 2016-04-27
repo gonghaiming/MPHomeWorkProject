@@ -32,26 +32,32 @@ typedef unsigned long long UINT64;
 typedef int BOOL
 
 /*报文头部*/
-struct pktHeader
+typedef struct pktHeader
 {
     INT8 code;
     INT8 id;
     INT16 lengthPkt;
     INT8 md5Auth[16];
-}
+}pktHeader;
 
 /*报文正文内容*/
-Struct content
+typedef struct content
 {
     INT8 type;
     INT8 lengthItem;
     INT8 value[20];
-}
+}content;
 
 /*报文*/
-struct pkt
+typedef struct pkt
 {
     Struct pktHeader head;
     INT8 content[1500];
-}
+}pkt
+
+/*用户信息*/
+typedef struct userInfo{
+	char name[20];
+	char password[32];
+}userInfo;
 #endif
