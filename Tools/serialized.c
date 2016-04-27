@@ -15,7 +15,7 @@
  * RETURNS:
  *        NULL
  *****************************************************************/
-INT16 clientSerialized(char *pktdata,pktcontent **pcontent)
+INT16 clientSerialized(char *pktdata,pktcontent *pcontent)
 {
     
     pktHeader header;
