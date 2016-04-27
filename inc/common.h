@@ -29,7 +29,7 @@ typedef unsigned int UINT32;
 typedef signed int INT32; 
 typedef signed long long INT64; 
 typedef unsigned long long UINT64; 
-typedef int BOOL
+typedef int BOOL;
 
 /*报文头部*/
 typedef struct pktHeader
@@ -46,18 +46,19 @@ typedef struct content
     INT8 type;
     INT8 lengthItem;
     INT8 value[20];
-}content;
+}pktcontent;
 
 /*报文*/
 typedef struct pkt
 {
-    Struct pktHeader head;
+    struct pktHeader head;
     INT8 content[1500];
-}pkt
+}pkt;
 
 /*用户信息*/
 typedef struct userInfo{
-	char name[20];
-	char password[32];
+	INT8 name[20];
+	INT8 password[32];
+    INT8 previlage;
 }userInfo;
 #endif
